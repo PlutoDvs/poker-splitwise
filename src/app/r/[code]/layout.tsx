@@ -2,6 +2,7 @@ import Link from "next/link";
 import { loadRoom } from "@/lib/room-access";
 import { RoomNav } from "@/components/RoomNav";
 import { RememberRoom } from "@/components/RememberRoom";
+import { RoomSwitcher } from "@/components/RoomSwitcher";
 
 export default async function RoomLayout({
   children,
@@ -16,7 +17,7 @@ export default async function RoomLayout({
 
   return (
     <div className="mx-auto w-full max-w-3xl px-4 py-5">
-      <RememberRoom code={code} name={room.name} mode={mode} />
+      <RememberRoom id={room.id} code={code} name={room.name} mode={mode} />
       <header className="mb-5">
         <div className="flex items-start justify-between gap-3">
           <div>
@@ -30,12 +31,7 @@ export default async function RoomLayout({
               {isAdmin ? "Admin access · you can edit" : "View only"}
             </p>
           </div>
-          <Link
-            href="/"
-            className="rounded-lg px-2 py-1 text-sm text-zinc-400 hover:text-zinc-700"
-          >
-            Exit
-          </Link>
+          <RoomSwitcher currentCode={code} currentId={room.id} />
         </div>
         <div className="mt-4">
           <RoomNav code={code} isAdmin={isAdmin} />
