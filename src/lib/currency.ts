@@ -18,7 +18,7 @@ export const CURRENCIES: Record<string, Currency> = {
   IRT: {
     code: "IRT",
     label: "Toman",
-    symbol: "تومان",
+    symbol: "Toman",
     decimals: 0,
     symbolPosition: "suffix",
     defaultTolerance: 5000,
