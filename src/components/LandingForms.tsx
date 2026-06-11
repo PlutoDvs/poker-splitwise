@@ -8,7 +8,7 @@ import {
 import { SubmitButton } from "./SubmitButton";
 
 const inputClass =
-  "w-full rounded-xl border border-zinc-300 bg-white px-3.5 py-2.5 text-sm outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100";
+  "w-full rounded-xl border border-zinc-300 bg-zinc-100 px-3.5 py-2.5 text-sm outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100";
 
 export function LandingForms({
   currencies,
@@ -30,7 +30,7 @@ export function LandingForms({
     <div className="flex flex-col gap-5">
       <form
         action={createAction}
-        className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm"
+        className="rounded-2xl border border-zinc-200 bg-zinc-100 p-5 shadow-sm"
       >
         <h2 className="text-base font-semibold text-zinc-900">
           Create a new group
@@ -59,7 +59,7 @@ export function LandingForms({
             ))}
           </select>
           {createState.error ? (
-            <p className="text-sm text-red-600">{createState.error}</p>
+            <p className="text-sm text-red-400">{createState.error}</p>
           ) : null}
           <SubmitButton pendingText="Creating…">Create group</SubmitButton>
         </div>
@@ -67,7 +67,7 @@ export function LandingForms({
 
       <form
         action={openAction}
-        className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm"
+        className="rounded-2xl border border-zinc-200 bg-zinc-100 p-5 shadow-sm"
       >
         <h2 className="text-base font-semibold text-zinc-900">
           Open an existing group
@@ -84,7 +84,7 @@ export function LandingForms({
             required
           />
           {openState.error ? (
-            <p className="text-sm text-red-600">{openState.error}</p>
+            <p className="text-sm text-red-400">{openState.error}</p>
           ) : null}
           <SubmitButton variant="ghost" pendingText="Opening…">
             Open group

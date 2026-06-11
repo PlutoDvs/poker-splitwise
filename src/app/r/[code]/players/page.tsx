@@ -44,7 +44,7 @@ export default async function PlayersPage({
                 <input
                   name="name"
                   defaultValue={p.name}
-                  className={`min-w-0 flex-1 rounded-lg border border-transparent bg-transparent px-2 py-1.5 text-sm hover:border-zinc-200 focus:border-emerald-500 focus:bg-white focus:outline-none ${
+                  className={`min-w-0 flex-1 rounded-lg border border-transparent bg-transparent px-2 py-1.5 text-sm hover:border-zinc-200 focus:border-emerald-500 focus:bg-zinc-100 focus:outline-none ${
                     p.isActive ? "text-zinc-900" : "text-zinc-400"
                   }`}
                 />
@@ -68,7 +68,7 @@ export default async function PlayersPage({
                   className={`rounded-lg px-2.5 py-1.5 text-xs font-medium ${
                     p.isActive
                       ? "text-zinc-500 hover:bg-zinc-50"
-                      : "text-emerald-700 hover:bg-emerald-50"
+                      : "text-emerald-400 hover:bg-emerald-500/10"
                   }`}
                 >
                   {p.isActive ? "Deactivate" : "Reactivate"}

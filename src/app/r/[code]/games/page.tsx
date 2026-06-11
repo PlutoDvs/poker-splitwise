@@ -72,7 +72,7 @@ export default async function GamesPage({
             </div>
 
             {g.discrepancy !== 0 ? (
-              <div className="mb-2 inline-flex rounded-lg bg-amber-50 px-2 py-1 text-xs font-medium text-amber-700">
+              <div className="mb-2 inline-flex rounded-lg bg-amber-500/15 px-2 py-1 text-xs font-medium text-amber-300">
                 Chip count off by{" "}
                 <Money
                   amount={Math.abs(g.discrepancy)}
@@ -127,7 +127,7 @@ export default async function GamesPage({
                 <input type="hidden" name="gameId" value={g.id} />
                 <ConfirmButton
                   message="Delete this game? Balances will be recalculated."
-                  className="text-xs font-medium text-red-600 hover:underline"
+                  className="text-xs font-medium text-red-400 hover:underline"
                 >
                   Delete game
                 </ConfirmButton>

@@ -54,7 +54,7 @@ export default async function StatsPage({
                   <td className="px-2 py-2.5 text-center text-zinc-600">
                     {s.gamesPlayed}
                   </td>
-                  <td className="px-2 py-2.5 text-right text-emerald-600">
+                  <td className="px-2 py-2.5 text-right text-emerald-400">
                     {s.biggestWin > 0 ? (
                       <Money
                         amount={s.biggestWin}

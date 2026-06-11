@@ -46,7 +46,7 @@ export default async function Dashboard({
           {isAdmin && state.transfers.length > 0 ? (
             <Link
               href={`/r/${code}/settle`}
-              className="text-sm font-medium text-emerald-700 hover:underline"
+              className="text-sm font-medium text-emerald-400 hover:underline"
             >
               Record a payment →
             </Link>
@@ -150,7 +150,7 @@ function Stat({
   value: React.ReactNode;
 }) {
   return (
-    <div className="rounded-2xl border border-zinc-200 bg-white p-3 text-center shadow-sm">
+    <div className="rounded-2xl border border-zinc-200 bg-zinc-100 p-3 text-center shadow-sm">
       <div className="text-base font-semibold text-zinc-900">{value}</div>
       <div className="text-xs text-zinc-500">{label}</div>
     </div>
@@ -170,7 +170,7 @@ function LinkRow({
     <div>
       <div
         className={`mb-1 text-xs font-medium ${
-          danger ? "text-red-600" : "text-zinc-500"
+          danger ? "text-red-400" : "text-zinc-500"
         }`}
       >
         {label}

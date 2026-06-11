@@ -75,7 +75,7 @@ export default async function SettlePage({
                     <input type="hidden" name="paymentId" value={p.id} />
                     <ConfirmButton
                       message="Delete this payment?"
-                      className="text-xs font-medium text-red-600 hover:underline"
+                      className="text-xs font-medium text-red-400 hover:underline"
                     >
                       Delete
                     </ConfirmButton>

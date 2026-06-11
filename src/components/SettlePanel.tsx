@@ -18,7 +18,7 @@ interface Suggestion {
 }
 
 const fieldClass =
-  "w-full rounded-xl border border-zinc-300 bg-white px-3.5 py-2.5 text-sm outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100";
+  "w-full rounded-xl border border-zinc-300 bg-zinc-100 px-3.5 py-2.5 text-sm outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100";
 
 export function SettlePanel({
   code,
@@ -59,7 +59,7 @@ export function SettlePanel({
   return (
     <div className="flex flex-col gap-4">
       {suggestions.length > 0 ? (
-        <div className="rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm">
+        <div className="rounded-2xl border border-zinc-200 bg-zinc-100 p-4 shadow-sm">
           <h2 className="mb-2 text-sm font-semibold text-zinc-900">
             Suggested payments
           </h2>
@@ -69,7 +69,7 @@ export function SettlePanel({
                 <button
                   type="button"
                   onClick={() => prefill(s)}
-                  className="flex w-full items-center justify-between rounded-xl bg-zinc-50 px-4 py-3 text-left hover:bg-emerald-50"
+                  className="flex w-full items-center justify-between rounded-xl bg-zinc-50 px-4 py-3 text-left hover:bg-emerald-500/10"
                 >
                   <span className="text-sm text-zinc-700">
                     <span className="font-medium text-zinc-900">
@@ -95,7 +95,7 @@ export function SettlePanel({
 
       <form
         action={action}
-        className="rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm"
+        className="rounded-2xl border border-zinc-200 bg-zinc-100 p-4 shadow-sm"
       >
         <h2 className="mb-3 text-sm font-semibold text-zinc-900">
           Record a payment
@@ -157,7 +157,7 @@ export function SettlePanel({
           </label>
         </div>
         {state.error ? (
-          <p className="mt-3 text-sm text-red-600">{state.error}</p>
+          <p className="mt-3 text-sm text-red-400">{state.error}</p>
         ) : null}
         <div className="mt-4 flex justify-end">
           <SubmitButton pendingText="Saving…">Record payment</SubmitButton>

@@ -18,7 +18,7 @@ export function SubmitButton({
     variant === "danger"
       ? "bg-red-600 text-white hover:bg-red-700"
       : variant === "ghost"
-        ? "border border-zinc-300 bg-white text-zinc-700 hover:bg-zinc-50"
+        ? "border border-zinc-300 bg-zinc-100 text-zinc-700 hover:bg-zinc-50"
         : "bg-emerald-600 text-white hover:bg-emerald-700";
   return (
     <button

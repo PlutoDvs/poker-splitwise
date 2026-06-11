@@ -10,7 +10,7 @@ export function Card({
 }) {
   return (
     <div
-      className={`rounded-2xl border border-zinc-200 bg-white shadow-sm ${className}`}
+      className={`rounded-2xl border border-zinc-200 bg-zinc-100 shadow-sm ${className}`}
     >
       {children}
     </div>
@@ -36,7 +36,7 @@ export function PageTitle({
 
 export function EmptyState({ title, hint }: { title: string; hint?: string }) {
   return (
-    <div className="rounded-2xl border border-dashed border-zinc-300 bg-white/60 p-8 text-center">
+    <div className="rounded-2xl border border-dashed border-zinc-300 bg-zinc-100/60 p-8 text-center">
       <p className="font-medium text-zinc-700">{title}</p>
       {hint ? <p className="mt-1 text-sm text-zinc-500">{hint}</p> : null}
     </div>
@@ -45,8 +45,8 @@ export function EmptyState({ title, hint }: { title: string; hint?: string }) {
 
 /** Tailwind text-color class for a signed net/balance amount. */
 export function netColor(amount: number): string {
-  if (amount > 0) return "text-emerald-600";
-  if (amount < 0) return "text-red-600";
+  if (amount > 0) return "text-emerald-400";
+  if (amount < 0) return "text-red-400";
   return "text-zinc-500";
 }
 

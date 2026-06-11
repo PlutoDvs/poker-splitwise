@@ -8,8 +8,8 @@ export default function manifest(): MetadataRoute.Manifest {
       "Track poker buy-ins and cash-outs, verify the chips balance, and settle up with the fewest payments.",
     start_url: "/",
     display: "standalone",
-    background_color: "#f4f4f5",
-    theme_color: "#059669",
+    background_color: "#1b1c20",
+    theme_color: "#1b1c20",
     icons: [
       {
         src: "/icon.svg",

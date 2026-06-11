@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f4f4f5; /* zinc-100 */
-  --foreground: #18181b; /* zinc-900 */
+  /* Dark gray base (intentionally not pitch black). */
+  --background: #1b1c20;
+  --foreground: #f2f2f3;
 }
 
 @theme inline {
@@ -10,6 +11,32 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+}
+
+/*
+ * Dark theme. The whole UI is built on the zinc scale + white cards, so we
+ * remap zinc to a dark ramp (and treat `bg-zinc-100` as the card surface).
+ * This keeps every existing utility class rendering correctly in dark mode
+ * from a single place. `text-white` stays white for button labels.
+ */
+@theme {
+  --color-zinc-50: #202126;
+  --color-zinc-100: #292a30;
+  --color-zinc-200: #383942;
+  --color-zinc-300: #4d4e57;
+  --color-zinc-400: #8a8b93;
+  --color-zinc-500: #a1a2aa;
+  --color-zinc-600: #b6b7bf;
+  --color-zinc-700: #cccdd3;
+  --color-zinc-800: #e3e3e7;
+  --color-zinc-900: #f2f2f3;
+  --color-zinc-950: #fafafa;
+}
+
+html {
+  /* Make native controls (date picker, selects, scrollbars) render dark. */
+  color-scheme: dark;
+  background: var(--background);
 }
 
 body {

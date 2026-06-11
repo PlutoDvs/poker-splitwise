@@ -4,7 +4,7 @@ import { updateRoomAction, type FormState } from "@/app/r/[code]/actions";
 import { SubmitButton } from "./SubmitButton";
 
 const fieldClass =
-  "w-full rounded-xl border border-zinc-300 bg-white px-3.5 py-2.5 text-sm outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100";
+  "w-full rounded-xl border border-zinc-300 bg-zinc-100 px-3.5 py-2.5 text-sm outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100";
 
 export function SettingsForm({
   code,
@@ -27,7 +27,7 @@ export function SettingsForm({
   return (
     <form
       action={action}
-      className="flex flex-col gap-3 rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm"
+      className="flex flex-col gap-3 rounded-2xl border border-zinc-200 bg-zinc-100 p-4 shadow-sm"
     >
       <input type="hidden" name="code" value={code} />
       <label className="text-sm">
@@ -65,10 +65,10 @@ export function SettingsForm({
       </label>
 
       {state.error ? (
-        <p className="text-sm text-red-600">{state.error}</p>
+        <p className="text-sm text-red-400">{state.error}</p>
       ) : null}
       {state.ok ? (
-        <p className="text-sm text-emerald-600">Saved.</p>
+        <p className="text-sm text-emerald-400">Saved.</p>
       ) : null}
 
       <div className="flex justify-end">
