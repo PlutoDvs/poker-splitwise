@@ -1,5 +1,6 @@
 import { CURRENCY_OPTIONS, DEFAULT_CURRENCY_CODE } from "@/lib/currency";
 import { LandingForms } from "@/components/LandingForms";
+import { RecentRooms } from "@/components/RecentRooms";
 
 export default function Home() {
   const currencies = CURRENCY_OPTIONS.map((c) => ({
@@ -21,10 +22,13 @@ export default function Home() {
           and settle up with the fewest possible payments.
         </p>
       </div>
-      <LandingForms
-        currencies={currencies}
-        defaultCurrency={DEFAULT_CURRENCY_CODE}
-      />
+      <div className="flex flex-col gap-5">
+        <RecentRooms />
+        <LandingForms
+          currencies={currencies}
+          defaultCurrency={DEFAULT_CURRENCY_CODE}
+        />
+      </div>
       <p className="mt-6 text-center text-xs text-zinc-400">
         Keep your admin link private — anyone with it can edit the group.
       </p>

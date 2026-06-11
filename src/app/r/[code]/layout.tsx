@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { loadRoom } from "@/lib/room-access";
 import { RoomNav } from "@/components/RoomNav";
+import { RememberRoom } from "@/components/RememberRoom";
 
 export default async function RoomLayout({
   children,
@@ -15,6 +16,7 @@ export default async function RoomLayout({
 
   return (
     <div className="mx-auto w-full max-w-3xl px-4 py-5">
+      <RememberRoom code={code} name={room.name} mode={mode} />
       <header className="mb-5">
         <div className="flex items-start justify-between gap-3">
           <div>
